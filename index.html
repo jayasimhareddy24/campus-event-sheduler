@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Campus Event Scheduler</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            🎓 Campus Events
+        </div>
+
+        <nav>
+            <a href="#events">Events</a>
+            <a href="#add-event">Add Event</a>
+            <a href="#bookings">My Bookings</a>
+        </nav>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+
+        <div>
+            <h1>Campus Event Scheduler</h1>
+
+            <p>
+                Discover, schedule and book your favorite campus events.
+            </p>
+
+            <a href="#events" class="hero-btn">
+                Explore Events
+            </a>
+        </div>
+
+    </section>
+
+
+    <!-- Events Section -->
+    <section id="events" class="container">
+
+        <h2>📅 Upcoming Events</h2>
+
+        <!-- Search and Filter -->
+        <div class="controls">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search events..."
+            >
+
+            <select id="categoryFilter">
+
+                <option value="all">All Categories</option>
+
+                <option value="Technical">
+                    Technical
+                </option>
+
+                <option value="Cultural">
+                    Cultural
+                </option>
+
+                <option value="Sports">
+                    Sports
+                </option>
+
+                <option value="Workshop">
+                    Workshop
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- Event Cards -->
+        <div id="eventContainer" class="event-grid"></div>
+
+    </section>
+
+
+    <!-- Add Event -->
+    <section id="add-event" class="container">
+
+        <h2>➕ Add Campus Event</h2>
+
+        <form id="eventForm">
+
+            <input
+                type="text"
+                id="eventName"
+                placeholder="Event Name"
+                required
+            >
+
+            <select id="eventCategory" required>
+
+                <option value="">
+                    Select Category
+                </option>
+
+                <option value="Technical">
+                    Technical
+                </option>
+
+                <option value="Cultural">
+                    Cultural
+                </option>
+
+                <option value="Sports">
+                    Sports
+                </option>
+
+                <option value="Workshop">
+                    Workshop
+                </option>
+
+            </select>
+
+            <input
+                type="date"
+                id="eventDate"
+                required
+            >
+
+            <input
+                type="time"
+                id="eventTime"
+                required
+            >
+
+            <input
+                type="text"
+                id="eventVenue"
+                placeholder="Venue"
+                required
+            >
+
+            <input
+                type="number"
+                id="eventSeats"
+                placeholder="Total Seats"
+                min="1"
+                required
+            >
+
+            <textarea
+                id="eventDescription"
+                placeholder="Event Description"
+                required
+            ></textarea>
+
+            <button type="submit">
+                Add Event
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- My Bookings -->
+    <section id="bookings" class="container">
+
+        <h2>🎟️ My Bookings</h2>
+
+        <div id="bookingContainer"></div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 Campus Event Scheduler
+        </p>
+
+        <p>
+            Built with HTML, CSS & JavaScript
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
